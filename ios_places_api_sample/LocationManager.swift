@@ -31,7 +31,6 @@ class LocationManager : NSObject , CLLocationManagerDelegate {
     func initializeLocationManager() -> Void {
         let locationManager = CLLocationManager()
         locationManager.requestAlwaysAuthorization()
-        locationManager.requestWhenInUseAuthorization()
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self

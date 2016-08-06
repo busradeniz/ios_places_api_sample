@@ -22,7 +22,7 @@ class CurrentPlacesViewController: UIViewController {
     }
     
     func getCurrentPlace() {
-        
+        placesClient = GMSPlacesClient.sharedClient();
         placesClient?.currentPlaceWithCallback({(placeLikelihoodList: GMSPlaceLikelihoodList?, error: NSError?) -> Void in
             if let error = error {
                 print("Pick Place error: \(error.localizedDescription)")
